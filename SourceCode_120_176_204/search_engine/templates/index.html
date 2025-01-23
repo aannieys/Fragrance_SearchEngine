@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .search-container {
+            width: 100%;
+            min-height: 70vh;
+            padding: 5%;
+            background-color: #f8f9fa;
+            /* Light gray background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .search-bar input {
+            background: transparent;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 12px;
+            font-size: 16px;
+            /* Reduced font size */
+            color: #495057;
+            /* Darker text color */
+        }
+
+        ::placeholder {
+            color: #6c757d;
+            /* Placeholder text color */
+        }
+
+        .search-bar button img {
+            width: 20px;
+            /* Slightly smaller icon */
+        }
+
+        .search-bar button {
+            border: 0;
+            border-radius: 80px;
+            width: 60px;
+            /* Smaller button size */
+            height: 50px;
+            background: #003369;
+            /* Blue button color */
+            cursor: pointer;
+            margin-left: 8px;
+            /* Increased margin between input and button */
+        }
+
+        .search-bar button:hover {
+            background: #0453a8;
+            /* Blue button color */
+            transition: 0.3s;
+        }
+
+
+        .search-text {
+            margin-bottom: 35px;
+            font-size: 45px;
+            color: #495057;
+            /* Darker heading color */
+        }
+
+        .fragrance-section {
+            text-align: center;
+            padding: 60px;
+            margin: 0 auto;
+            /* Center the section */
+            max-width: 800px;
+            /* Set a maximum width for the section */
+        }
+
+        .fragrance-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .image-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            /* Adjust the gap between images */
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            width: 100%;
+            /* Take full width */
+        }
+
+        .image-slider img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-slider img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+
+    <title>Search for Fragrance</title>
+</head>
+
+<body>
+
+    <div class="search-container">
+        <div class="search-text">
+            <h1>Fragrance</h1>
+        </div>
+        <form class="search-bar" method="GET" action="{{ url_for('search') }}">
+            <input type="text" class="search-box form-control" name="keyword" placeholder="Type to search..."
+                value="{{ keyword }}">
+            <button type="submit" class="search-button btn btn-primary"><img src="/static/img/search.png"></button>
+        </form>
+    </div>
+
+    <div class="fragrance-section">
+        <h2>New Perfumes</h2>
+        <div class="image-slider">
+            <img src="/static/img/imgFra/img1.png" alt="Fragrance 1">
+            <img src="/static/img/imgFra/img2.png" alt="Fragrance 2">
+            <img src="/static/img/imgFra/img3.png" alt="Fragrance 3">
+            <img src="/static/img/imgFra/img4.png" alt="Fragrance 4">
+            <img src="/static/img/imgFra/img5.png" alt="Fragrance 5">
+            <img src="/static/img/imgFra/img6.png" alt="Fragrance 6">
+            <img src="/static/img/imgFra/img7.png" alt="Fragrance 7">
+            <img src="/static/img/imgFra/img8.png" alt="Fragrance 8">
+            <img src="/static/img/imgFra/img9.png" alt="Fragrance 9">
+            <img src="/static/img/imgFra/img10.png" alt="Fragrance 10">
+            <img src="/static/img/imgFra/img11.png" alt="Fragrance 11">
+            <img src="/static/img/imgFra/img12.png" alt="Fragrance 12">
+            <img src="/static/img/imgFra/img13.png" alt="Fragrance 13">
+            <img src="/static/img/imgFra/img14.png" alt="Fragrance 14">
+            <img src="/static/img/imgFra/img15.png" alt="Fragrance 15">
+        </div>
+    </div>
+
+</body>
+
+</html>
